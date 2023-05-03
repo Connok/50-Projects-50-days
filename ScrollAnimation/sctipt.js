@@ -1,1 +1,15 @@
-// https://www.traversymedia.com/products/50-projects-in-50-days-html-css-javascript/categories/2152088045/posts/2164608631
+const boxes = document.querySelectorAll('.box')
+
+window.addEventListener('scroll', checkBoxes)
+
+function checkBoxes() {
+    const triggerBottom = window.innerHeight / 5 * 4
+    boxes.forEach(box => {
+        const boxTop = box.getBoundingClientRect().top
+        if (boxTop < triggerBottom) {
+            box.classList.add("show")
+        } else {
+            box.classList.remove('show')
+        }
+    })
+}
