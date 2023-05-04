@@ -1,1 +1,23 @@
-// https://www.traversymedia.com/products/50-projects-in-50-days-html-css-javascript/categories/2152088045/posts/2164608631
+const sounds = ['applause', 'boo', 'gasp', 'tada', 'victory', 'wrong']
+
+sounds.forEach(sound => {
+    const btn = document.createElement('button')
+    btn.classList.add('btn')
+
+    btn.innerText = sound
+    btn.addEventListener('click', () => {
+        stopSongs()
+        document.getElementById(sound).play()
+    })
+
+    document.getElementById('buttons').
+        appendChild(btn)
+})
+
+function stopSongs() {
+    sounds.forEach(sound => {
+        const song = document.getElementById(sound)
+        song.pause()
+        song.currentTime = 0;
+    })
+}
