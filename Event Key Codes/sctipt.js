@@ -1,1 +1,20 @@
-// https://www.traversymedia.com/products/50-projects-in-50-days-html-css-javascript/categories/2152088045/posts/2164608631
+const insert = document.getElementById('insert')
+
+
+
+window.addEventListener('keydown', (event) =>{
+insert.innerHTML = `
+<div class="key">
+${event.key === ' ' ? 'Space' : event.key}
+<small>event.key</small>
+</div>
+<div class="key">
+${event.keyCode}
+<small>event.keyCode</small>
+</div>
+<div class="key">
+${event.code}
+<small>event.Code</small>
+</div>`
+console.log(event)
+})
