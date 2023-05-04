@@ -1,1 +1,33 @@
-// https://www.traversymedia.com/products/50-projects-in-50-days-html-css-javascript/categories/2152088045/posts/2164608631
+const jokeEl = document.getElementById('joke')
+const jokeBtn = document.getElementById('jokeBtn')
+
+generateJoke()
+jokeBtn.addEventListener('click', generateJoke)
+async function generateJoke() {
+    const config = {
+        headers: {
+            Accept: 'application/json',
+        },
+    }
+    const res = await fetch('https://icanhazdadjoke.com/', config)
+    const data = await res.json()
+    joke.innerHTML = data.joke
+}
+
+/**
+ * function generateJoke() {
+    const config = {
+        headers: {
+            Accept: 'application/json',
+        },
+    }
+    fetch('https://icanhazdadjoke.com/', config)
+        .then((res) => res.json())
+        .then((data) => {
+            joke.innerHTML = data.joke
+        })
+}
+
+ 
+*/
+
