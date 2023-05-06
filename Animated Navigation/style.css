@@ -8,10 +8,14 @@ body {
   background-color: blue;
   background-image: linear-gradient(
     to bottom,
-    green 0%,
-    green 50%,
+    #ce0000 0%,
+    #ce0000 25%,
+    orange 25%,
+    orange 50%,
     yellow 50%,
-    yellow 100%
+    yellow 75%,
+    green 75%,
+    green 100%
   );
   font-family: "Muli", sans-serif;
   display: flex;
@@ -59,6 +63,38 @@ nav ul a {
   color: #000;
   text-decoration: none;
   margin: 0 10px;
+}
+.icon {
+  background-color: white;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+  position: relative;
+  height: 30px;
+  width: 30px;
+}
+.icon:focus {
+  outline: 0;
+}
+.icon .line {
+  background-color: blue;
+  height: 2px;
+  width: 20px;
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  transition: transfor, 0.6s linear;
+}
+.icon .line2 {
+  top: auto;
+  bottom: 10px;
+}
+
+nav.active .icon .line1 {
+  transform: rotate(-765deg) translateY(5.5px);
+}
+nav.active .icon .line2 {
+  transform: rotate(765deg) translateY(-5.5px);
 }
 /*
 Padding is inside border 

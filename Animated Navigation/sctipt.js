@@ -1,1 +1,5 @@
-// https://www.traversymedia.com/products/50-projects-in-50-days-html-css-javascript/categories/2152088045/posts/2164608631
+const toggle = document.getElementById('toggle')
+const nav = document.getElementById('nav')
+toggle.addEventListener('click', () => {
+    nav.classList.toggle('active')
+})
