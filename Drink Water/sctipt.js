@@ -1,1 +1,23 @@
-// https://www.traversymedia.com/products/50-projects-in-50-days-html-css-javascript/categories/2152088045/posts/2164608631
+const smallCups = document.querySelectorAll('.cup-small')
+const liters = document.getElementById('liters')
+const precentage = document.getElementById('precentage')
+const remained = document.getElementById('remained')
+
+smallCups.forEach((cup, idx) => {
+    cup.addEventListener('click', () => highlightCups(idx))
+})
+
+function highlightCups(idx) {
+    if (smallCups[idx].classList.contains('full') && !smallCups
+    [idx].nextElementSibling.classList.contains('full')) {
+        idx--
+    }
+    smallCups.forEach((cup, idx2) => {
+        if (idx2 <= idx) {
+            cup.classList.add('full')
+        } else {
+            cup.classList.remove('full')
+        }
+
+    })
+}
