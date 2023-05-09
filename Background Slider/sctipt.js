@@ -1,1 +1,18 @@
-// https://www.traversymedia.com/products/50-projects-in-50-days-html-css-javascript/categories/2152088045/posts/2164608631
+const body = document.body
+const slides = document.querySelectorAll('.slide')
+const leftBtn = document.getElementById('left')
+const rightBtn = document.getElementById('right')
+
+let activeSlide = 0
+
+setBgToBody()
+
+function setBgToBody() {
+    body.style.backgroundImage = slides[activeSlide].style
+    backgroundImage
+}
+function setActiveSlide() {
+    slides.forEach((slide) => slide.classList.remove('active'))
+
+    slides[activeSlide].classList.add('active')
+}
