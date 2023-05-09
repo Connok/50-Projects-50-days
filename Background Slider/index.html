@@ -5,18 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <!-- <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    / -->
-    <title>My Project</title>
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" / >
+    <title>Background Slider</title>
     <link rel="shortcut icon" type="image/jpg" href="/ConnorLogo.jpg" />
   </head>
   <body>
-    <h1>Project Starter</h1>
+    <div class="slider-container">
+      <div
+        class="slide active"
+        style="
+          background-image: url('https://images.contentstack.io/v3/assets/blte410e3b15535c144/blt086b5262ef4388c9/61fac8b56291fb2853f30fdd/gear-screenshot-full2.jpg?format=webp');
+        "
+      ></div>
+      <div
+        class="slide"
+        style="
+          background-image: url('https://images.contentstack.io/v3/assets/blte410e3b15535c144/blt086b5262ef4388c9/61fac8b56291fb2853f30fdd/gear-screenshot-full2.jpg?format=webp');
+        "
+      ></div>
+      <div
+        class="slide"
+        style="
+          background-image: url('https://images.contentstack.io/v3/assets/blte410e3b15535c144/blt9b937c885839a336/61fac8b5a7cc8435c175ebca/gear-screenshot-full3.jpg?format=webp');
+        "
+      ></div>
+      <div
+        class="slide"
+        style="
+          background-image: url('https://images.contentstack.io/v3/assets/blte410e3b15535c144/blt50d23d14603ec981/61fac8b517f4c326db2fce86/gear-screenshot-full1.jpg?format=webp');
+        "
+      ></div>
+      <div
+        class="slide"
+        style="
+          background-image: url('https://images.contentstack.io/v3/assets/blte410e3b15535c144/bltc9dad373ae8773df/63a08f04e4854333dc178132/lfl-neomuna-img2-1920x1080.jpg');
+        "
+      ></div>
+      <button class="arrow left-arrow" id="left">
+        <i class="fas fa-arrow-left"></i>
+      </button>
+      <button class="arrow right-arrow" id="right">
+        <i class="fas fa-arrow-right"></i>
+      </button>
+    </div>
 
     <script src="sctipt.js"></script>
   </body>
