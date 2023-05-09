@@ -13,7 +13,7 @@ body {
   height: 100vh;
   overflow: hidden;
   margin: 0;
-  background-image: url('https://images.contentstack.io/v3/assets/blte410e3b15535c144/blt9b937c885839a336/61fac8b5a7cc8435c175ebca/gear-screenshot-full3.jpg?format=webp');
+  background-image: url('https://images.contentstack.io/v3/assets/blte410e3b15535c144/blt086b5262ef4388c9/61fac8b56291fb2853f30fdd/gear-screenshot-full2.jpg?format=webp');
   background-position: centre centre;
   background-size: cover;
   transition: 0.4s ease;
@@ -54,7 +54,7 @@ body::before{
   position: fixed;
   color: white;
   background-color: transparent;
-  pading: 20px;
+  padding: 20px;
   font-size: 30px;
   border: 2px solid orange;
   top: 50%;
