@@ -1,1 +1,47 @@
-// https://www.traversymedia.com/products/50-projects-in-50-days-html-css-javascript/categories/2152088045/posts/2164608631
+const fill = document.querySelector('.fill')
+const empties = document.querySelectorAll('.empty')
+
+fill.addEventListener('dragstart', dragStart)
+fill.addEventListener('dragend', dragEnd)
+
+for (const empty of empties) {
+    empty.addEventListener('dragover', dragOver)
+    empty.addEventListener('dragenter', dragEnter)
+    empty.addEventListener('dragleave', dragLeave)
+    empty.addEventListener('drop', dragDrop)
+}
+function dragStart() {
+    console.log('dragStart')
+    this.className += ' hold'
+    setTimeout(() => this.className = 'invisible', 0)
+
+}
+function dragEnd() {
+    console.log('dragEnd')
+    this.className = 'fill'
+}
+function dragOver(e) {
+    e.preventDefault()
+    console.log('dragOver')
+}
+
+function dragEnter(e) {
+    e.preventDefault()
+    this.className += ' hovered'
+    console.log('dragEnter')
+}
+
+function dragLeave() {
+    console.log('dragLeave')
+    this.className = 'empty'
+}
+function dragDrop() {
+    console.log('dragDop')
+    this.className = 'empty'
+    this.append(fill)
+
+
+
+}
+
+
