@@ -9,32 +9,45 @@ const ctx = canvas.getContext('2d')
 
 let size = 10
 let isPressed = false
-let color = 'black'
+colorEl.value = 'black'
+let color = colorEl.value
 let x
 let y
 
+//canvas.addEventListener('mousedown', (e) => {
+//    isPressed = true
+//    x = e.offsetX
+//    y = e.offsetY
+//})
+//document.addEventListener('mouseup', (e) => {
+//    isPressed = false
+//    x = undefined
+//    y = undefined
+
+
+//})
 canvas.addEventListener('mousedown', (e) => {
     isPressed = true
+
     x = e.offsetX
     y = e.offsetY
 })
-canvas.addEventListener('mouseup', (e) => {
+document.addEventListener('mouseup', (e) => {
     isPressed = false
+
     x = undefined
     y = undefined
-    
-    
 })
 canvas.addEventListener('mousemove', (e) => {
-   if(isPressed = true){
-    const x2 = e.offsetX
-    const y2 = e.offsetY
+    if (isPressed) {
+        const x2 = e.offsetX
+        const y2 = e.offsetY
 
-    drawCircle(x2,y2)
-    drawLine(x,y,x2,y2)
-    y=y2
-    x=x2
-   }
+        drawCircle(x2, y2)
+        drawLine(x, y, x2, y2)
+        y = y2
+        x = x2
+    }
 })
 
 
@@ -53,19 +66,19 @@ function drawLine(x1, y1, x2, y2) {
     ctx.lineWidth = size * 2
     ctx.stroke()
 }
-function updateSizeOnScreen(){
+function updateSizeOnScreen() {
     sizeEl.innerText = size
 }
 increaseBTN.addEventListener('click', () => {
-    size += 5 
-    if(size > 50) {
+    size += 5
+    if (size > 50) {
         size = 50
     }
     updateSizeOnScreen()
 })
 decreaseBTN.addEventListener('click', () => {
-    size -= 5 
-    if(size < 5) {
+    size -= 5
+    if (size < 5) {
         size = 5
     }
     updateSizeOnScreen()
@@ -73,5 +86,5 @@ decreaseBTN.addEventListener('click', () => {
 colorEl.addEventListener('change', (e) => color = e.target.value)
 
 //clearEl.addEventListener('click', () => ctx.clearRect(0,0, canvas.with, canvas.height))
-clearEl.addEventListener('click', () => ctx.clearRect(0,0, canvas.width, canvas.height))
+clearEl.addEventListener('click', () => ctx.clearRect(0, 0, canvas.width, canvas.height))
 
