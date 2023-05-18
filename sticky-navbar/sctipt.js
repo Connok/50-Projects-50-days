@@ -1,1 +1,9 @@
-// https://www.traversymedia.com/products/50-projects-in-50-days-html-css-javascript/categories/2152088045/posts/2164608631
+const nav = document.querySelector('.nav')
+window.addEventListener('scroll', fixNav)
+function fixNav() {
+    if (window.scrollY > nav.offsetHeight + 150) {
+        nav.classList.add('active')
+    } else {
+        nav.classList.remove('active')
+    }
+}
