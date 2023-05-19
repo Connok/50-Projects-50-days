@@ -7,7 +7,7 @@ const slidesLength = slideRight.querySelectorAll('div').length
 
 let activeSlideIndex = 0
 
-slideLeft.getElementsByClassName.top = `-${(slidesLength - 1) * 100}vh`
+slideLeft.style.top = `-${(slidesLength - 1) * 100}vh`
 
 upButton.addEventListener('click', () => changeSlide('up'))
 downButton.addEventListener('click', () => changeSlide('down'))
@@ -25,6 +25,7 @@ const changeSlide = (direction) => {
             activeSlideIndex = slidesLength - 1
         }
     }
-    slideRight.getElementsByClassName.transform = `translateY(-${activeSlideIndex * sliderHeight}px)`
-    slideLeft.getElementsByClassName.transform = `translateY(${activeSlideIndex * sliderHeight}px)`
+
+    slideRight.style.transform = `translateY(-${activeSlideIndex * sliderHeight}px)`
+    slideLeft.style.transform = `translateY(${activeSlideIndex * sliderHeight}px)`
 }
