@@ -48,7 +48,7 @@ body {
   left: 3px;
   align-items: center;
   justify-content: center;
-  animation: slideOff o.3s linear forwards;
+  animation: slideOff 0.3s linear forwards;
 }
 .toggle:checked + .label .ball {
   animation: slideOn 0.3s linear forwards;

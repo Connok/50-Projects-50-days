@@ -1,1 +1,6 @@
-// https://www.traversymedia.com/products/50-projects-in-50-days-html-css-javascript/categories/2152088045/posts/2164608631
+const toggles = document.querySelectorAll('.toggle')
+const good = document.querySelector('#good')
+const fast = document.querySelector('#fast')
+const cheap = document.querySelector('#cheap')
+
+toggles.forEach(toggle => toggle.addEventListener('change'))
