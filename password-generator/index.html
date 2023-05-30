@@ -11,7 +11,7 @@
       integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
-    >
+    />
     <title>Password Generator</title>
     <link
       rel="shortcut icon"
@@ -22,8 +22,8 @@
   <body>
     <div class="container">
       <h2>Password Generator</h2>
-      <div class="resault-container">
-        <span class="resault"></span>
+      <div class="result-container">
+        <span id="result"></span>
         <button class="btn" id="clipboard">
           <i class="far fa-clipboard"></i>
         </button>
@@ -31,27 +31,27 @@
       <div class="settings">
         <div class="setting">
           <label>Password Length</label>
-          <input type="number"  id="length" min="4" max="20" value="20">
+          <input type="number" id="length" min="4" max="20" value="20" />
         </div>
         <div class="setting">
           <label>Include Uppercase Letters</label>
-          <input type="checkbox"  id="uppercase" checked="true">
+          <input type="checkbox" id="uppercase" checked="true" />
         </div>
         <div class="setting">
           <label>Include Lowercase Letters</label>
-          <input type="checkbox"  id="lowercase" checked="true">
+          <input type="checkbox" id="lowercase" checked="true" />
         </div>
         <div class="setting">
           <label>Include NUmbers</label>
-          <input type="checkbox"  id="numbers" checked="true">
+          <input type="checkbox" id="numbers" checked="true" />
         </div>
         <div class="setting">
           <label>Include Symbols</label>
-          <input type="checkbox"  id="symbols" checked="true">
+          <input type="checkbox" id="symbols" checked="true" />
         </div>
       </div>
       <button class="btn btn-large" id="generate">Generate Password</button>
-    </div>  
+    </div>
 
     <script src="script.js"></script>
   </body>
