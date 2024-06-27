@@ -1,1 +1,41 @@
-// https://www.traversymedia.com/products/50-projects-in-50-days-html-css-javascript/categories/2152088045/posts/2164608631
+const nums = document.querySelectorAll('.nums span');
+const counter = document.querySelector('.counter');
+const finalMessage = document.querySelector('.final');
+const replay = document.getElementById('replay');
+
+runAnamation()
+
+function resetDOM() { 
+    counter.classList.remove('hide')
+    finalMessage.classList.remove('show')
+    
+    nums.forEach((num) => {
+        num.classList.value = ''
+    })
+
+    nums[0].classList.add('in') 
+}
+
+
+function runAnamation() { 
+    nums.forEach((num, idx) => { 
+        const nextToLast = nums.length - 1
+
+        num.addEventListener('animationend', (e) => { 
+            if (e.animationName === 'goIn' && idx !== nextToLast) {
+                num.classList.remove('in')
+                num.classList.add('out')
+            } else if (e.animationName === 'goOut' && num.nextElementSibling) {
+                num.nextElementSibling.classList.add('in')
+            } else { 
+                counter.classList.add('hide')
+                finalMessage.classList.add('show')
+            }
+        })
+    })
+}
+
+replay.addEventListener('click', () => {
+    resetDOM()
+    runAnamation()
+})
