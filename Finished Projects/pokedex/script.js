@@ -17,7 +17,8 @@ const colors = {
     ice: '#98D8D8',
     dragon: '#7038F9',
     flying: '#5E7290',
-    steel: '#3E6978'
+    steel: '#3E6978',
+    dark: "#403233"
 }
 
 const main_types = Object.keys(colors)
